@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#101923">
+  <title>Interclasses 2025 | Painel admin</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+  <div class="page-shell">
+    <header class="topbar">
+      <a class="brand" href="index.html" aria-label="Voltar para o placar público"><span class="brand-mark"><span></span><span></span><span></span></span><span><strong>INTERCLASSES</strong><small>painel de organização · edição 2025</small></span></a>
+      <a class="public-link" href="index.html">Abrir placar público <span>↗</span></a>
+    </header>
+    <main class="admin-main">
+      <section class="admin-login" aria-label="Acesso administrativo"><label for="adminToken">Chave do administrador</label><input id="adminToken" type="password" placeholder="ADMIN_TOKEN"><button id="connectAdmin" type="button">Conectar</button><span id="authStatus">Edição bloqueada até conectar</span></section>
+      <section class="admin-intro"><div><p class="eyebrow">ÁREA DA ORGANIZAÇÃO <span>///</span> CONTROLE DE EVENTOS</p><h1>Central de<br><em>pontuação.</em></h1><p class="admin-description">Edite resultados e mantenha o placar público sincronizado para todos os times.</p></div><div class="admin-state"><span class="live-dot"><i></i> DADOS LOCAIS</span><strong id="adminTotal">8</strong><small>eventos cadastrados</small></div></section>
+      <section class="admin-grid">
+        <form class="admin-editor" id="eventForm">
+          <div class="admin-card-heading"><div><p class="eyebrow">EDITOR DE EVENTO</p><h2 id="formTitle">Novo evento</h2></div><span class="form-number" id="formNumber">09</span></div>
+          <input type="hidden" id="eventId">
+          <div class="field full"><label for="eventName">Nome da categoria</label><input id="eventName" required placeholder="Ex.: Handebol"></div>
+          <div class="field"><label for="eventRed">Pontos do Vermelho</label><input id="eventRed" type="number" min="0" required></div>
+          <div class="field"><label for="eventBlue">Pontos do Azul</label><input id="eventBlue" type="number" min="0" required></div>
+          <div class="field"><label for="eventStatus">Status</label><select id="eventStatus"><option value="ongoing">Em andamento</option><option value="finished">Finalizada</option></select></div>
+          <div class="field"><label for="eventNote">Observação pública</label><input id="eventNote" placeholder="Ex.: Vitória no último minuto"></div>
+          <div class="form-actions"><button class="save-button" type="submit"><span>＋</span> Salvar evento</button><button class="cancel-button" id="cancelEdit" type="button">Limpar</button></div>
+          <p class="form-feedback" id="formFeedback" role="status"></p>
+        </form>
+        <aside class="admin-summary"><p class="eyebrow">PLACAR CONSOLIDADO</p><div class="admin-totals"><div><strong id="adminRedTotal">0</strong><span>VERMELHO</span></div><i>VS</i><div><strong id="adminBlueTotal">0</strong><span>AZUL</span></div></div><div class="admin-leader" id="adminLeader"></div><button class="reset-button" id="resetData" type="button">Restaurar dados iniciais</button></aside>
+      </section>
+      <section class="events-section"><div class="section-heading"><div><p class="eyebrow">AGENDA E RESULTADOS</p><h2>Eventos cadastrados</h2></div><div class="admin-hint">Selecione um evento para editar</div></div><div class="admin-events" id="adminEvents"></div></section>
+    </main>
+    <footer class="footer"><span>INTERCLASSES 2026</span><span>Área restrita da organização</span><a href="https://www.instagram.com/jaooprado.03/" target="_blank" rel="noopener noreferrer">Desenvolvido por @jaooprado.03</a><a href="index.html">Voltar ao placar público</a></footer>
+  </div>
+  <script src="data.js"></script>
+  <script src="admin.js"></script>
+</body>
+</html>

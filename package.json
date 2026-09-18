@@ -1,0 +1,16 @@
+{
+  "name": "interclasses-placar",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Placar e painel administrativo do campeonato escolar",
+  "scripts": {
+    "start": "node server.js",
+    "dev:netlify": "netlify dev"
+  },
+  "dependencies": {
+    "@netlify/blobs": "^9.1.0"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

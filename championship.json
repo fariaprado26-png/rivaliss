@@ -1,0 +1,88 @@
+{
+  "teams": {
+    "red": "Time Vermelho",
+    "blue": "Time Azul"
+  },
+  "categories": [
+    {
+      "id": "futebol",
+      "name": "Futebol",
+      "icon": "01",
+      "red": 12,
+      "blue": 8,
+      "status": "finished",
+      "label": "Finalizada",
+      "note": "Vitória do Vermelho por 4 pontos."
+    },
+    {
+      "id": "queimada",
+      "name": "Queimada",
+      "icon": "02",
+      "red": 9,
+      "blue": 12,
+      "status": "finished",
+      "label": "Finalizada",
+      "note": "Azul virou o jogo na última rodada."
+    },
+    {
+      "id": "xadrez",
+      "name": "Xadrez",
+      "icon": "03",
+      "red": 8,
+      "blue": 8,
+      "status": "finished",
+      "label": "Empate técnico",
+      "note": "As equipes dividiram os pontos."
+    },
+    {
+      "id": "corrida",
+      "name": "Corrida",
+      "icon": "04",
+      "red": 10,
+      "blue": 7,
+      "status": "finished",
+      "label": "Finalizada",
+      "note": "Vermelho dominou o pódio."
+    },
+    {
+      "id": "gincana",
+      "name": "Gincana",
+      "icon": "05",
+      "red": 11,
+      "blue": 9,
+      "status": "finished",
+      "label": "Finalizada",
+      "note": "Disputa acirrada até o último desafio."
+    },
+    {
+      "id": "volei",
+      "name": "Vôlei",
+      "icon": "06",
+      "red": 7,
+      "blue": 10,
+      "status": "finished",
+      "label": "Finalizada",
+      "note": "Azul garantiu a vitória no tie-break."
+    },
+    {
+      "id": "basquete",
+      "name": "Basquete",
+      "icon": "07",
+      "red": 6,
+      "blue": 5,
+      "status": "ongoing",
+      "label": "Em andamento",
+      "note": "Intervalo do segundo tempo."
+    },
+    {
+      "id": "cabo",
+      "name": "Cabo de guerra",
+      "icon": "08",
+      "red": 4,
+      "blue": 3,
+      "status": "ongoing",
+      "label": "Em andamento",
+      "note": "Próxima bateria começa em instantes."
+    }
+  ]
+}

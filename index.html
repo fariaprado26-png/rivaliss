@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#101923">
+  <title>Interclasses 2025 | Placar</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="page-shell">
+    <header class="topbar">
+      <a class="brand" href="#top" aria-label="Voltar ao início">
+        <span class="brand-mark"><span></span><span></span><span></span></span>
+        <span><strong>INTERCLASSES</strong><small>edição 2025 · placar oficial</small></span>
+      </a>
+      <div class="topbar-meta">
+        <span class="live-dot"><i></i> AO VIVO</span>
+        <span class="update-time" id="lastUpdated">Atualizado agora</span>
+      </div>
+    </header>
+
+    <main id="top">
+      <section class="hero-grid" aria-labelledby="page-title">
+        <div class="hero-copy">
+          <p class="eyebrow">CAMPEONATO ESCOLAR <span>///</span> FASE FINAL</p>
+          <h1 id="page-title">Quem leva<br><em>o troféu?</em></h1>
+          <p class="hero-description">Acompanhe a disputa ponto a ponto entre as equipes. Cada categoria pode mudar o rumo desta final.</p>
+          <div class="hero-actions">
+            <a class="primary-action" href="#categories">Ver categorias <span>↓</span></a>
+            <span class="last-round"><span class="pulse-ring"></span> Rodada 06 de 08</span>
+          </div>
+        </div>
+
+        <div class="overall-scoreboard" aria-label="Placar geral">
+          <div class="scoreboard-header">
+            <span>PLACAR GERAL</span>
+            <span class="scoreboard-status">DISPUTA ABERTA</span>
+          </div>
+          <div class="teams-score">
+            <div class="team-score team-red">
+              <div class="team-name"><span class="team-dot"></span><span>TIME<br><b>VERMELHO</b></span></div>
+              <strong class="big-score" id="redTotal">67</strong>
+              <span class="score-label">PONTOS</span>
+            </div>
+            <div class="versus"><span>VS</span><i></i></div>
+            <div class="team-score team-blue">
+              <div class="team-name"><span class="team-dot"></span><span>TIME<br><b>AZUL</b></span></div>
+              <strong class="big-score" id="blueTotal">62</strong>
+              <span class="score-label">PONTOS</span>
+            </div>
+          </div>
+          <div class="leadership" id="leadership"><span class="leader-arrow">▲</span> VERMELHO NA FRENTE <b>+5</b></div>
+        </div>
+      </section>
+
+      <section class="stats-strip" aria-label="Resumo do campeonato">
+        <div class="stat-item"><span class="stat-icon trophy">★</span><div><strong id="redWins">4</strong><span>categorias vencidas</span></div><b class="red-text">VERMELHO</b></div>
+        <div class="stat-item"><span class="stat-icon trophy blue-star">★</span><div><strong id="blueWins">3</strong><span>categorias vencidas</span></div><b class="blue-text">AZUL</b></div>
+        <div class="stat-item"><span class="stat-icon draw">=</span><div><strong id="drawCount">1</strong><span>empate técnico</span></div><b class="neutral-text">EQUILÍBRIO</b></div>
+        <div class="stat-item stat-final"><span class="stat-icon flag">⚑</span><div><strong>2</strong><span>categorias restantes</span></div><b class="neutral-text">ATENÇÃO</b></div>
+      </section>
+
+      <section class="content-section chart-section" aria-labelledby="chart-title">
+        <div class="section-heading">
+          <div><p class="eyebrow">VISÃO GERAL</p><h2 id="chart-title">Pontuação por categoria</h2></div>
+          <div class="legend"><span><i class="legend-red"></i> Vermelho</span><span><i class="legend-blue"></i> Azul</span></div>
+        </div>
+        <div class="chart-wrap" id="chart" aria-label="Gráfico de barras com a pontuação por categoria"></div>
+      </section>
+
+      <section class="content-section" id="categories" aria-labelledby="categories-title">
+        <div class="section-heading categories-heading">
+          <div><p class="eyebrow">ACOMPANHE DE PERTO</p><h2 id="categories-title">Todas as categorias</h2></div>
+          <div class="filter-controls" role="group" aria-label="Filtrar categorias">
+            <button class="filter-button active" data-filter="all">Todas <span id="categoryCount">8</span></button>
+            <button class="filter-button" data-filter="ongoing">Em andamento <span>2</span></button>
+            <button class="filter-button" data-filter="finished">Finalizadas <span>6</span></button>
+          </div>
+        </div>
+        <div class="category-layout">
+          <div class="category-list" id="categoryList"></div>
+          <aside class="detail-panel" id="detailPanel" aria-live="polite"></aside>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer"><span>INTERCLASSES 2026</span><span>Feito para jogar junto.</span><a href="https://www.instagram.com/jaooprado.03/" target="_blank" rel="noopener noreferrer">Desenvolvido por @jaooprado.03</a><span>Placar oficial em tempo real</span></footer>
+  </div>
+  <script src="data.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
